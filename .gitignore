@@ -1,0 +1,39 @@
+# ──────────────────────────────────────────────
+# GF340 Filler Pro — .gitignore
+# ──────────────────────────────────────────────
+
+# ── Personal data files (NEVER commit real data) ──
+# If you keep your real data as a separate file, add it here:
+# my_data.txt
+# real_data.txt
+
+# ── OS files ──
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editor / IDE ──
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*~
+
+# ── Windows temp files ──
+$RECYCLE.BIN/
+*.lnk
+
+# ── Node (if ever used) ──
+node_modules/
+npm-debug.log*
+
+# ── Python virtualenv (if ever used) ──
+venv/
+__pycache__/
+*.pyc
+
+# ── Misc ──
+*.log
+*.tmp
+*.bak

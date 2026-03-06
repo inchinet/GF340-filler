@@ -1,0 +1,88 @@
+{
+    "Personal Particulars (Section A)": {
+        "Surname": "gf340from_field_name",
+        "GivenName": "gf340from_field_name2",
+        "ChineseName": "gf340from_field_chiname",
+        "ChineseCode": [
+            "label0",
+            "label1",
+            "label2",
+            "label3",
+            "label4",
+            "label5"
+        ],
+        "DOB": [
+            "dob0",
+            "dob1",
+            "dob2"
+        ],
+        "PlaceOfBirth": "dobplace",
+        "HKID": [
+            "hkid0",
+            "hkid1",
+            "hkid2"
+        ],
+        "Sex": "gf340from_field_sex",
+        "PermRes": "gf340from_field_permres",
+        "Address": [
+            "gf340from_field_radd1",
+            "gf340from_field_radd2"
+        ],
+        "District": "field.radd3",
+        "Country": "myraddr",
+        "Phone": "gf340from_field_tele1",
+        "Email": "gf340from_dto004_email",
+        "GuiltyOffence": "gf340from_field_guilty-"
+    },
+    "Section B": {
+        "Disabled": "gf340from_field_disabled-"
+    },
+    "Section III (Additional Info)": {
+        "Bachelor": "gf340from_field_degtee",
+        "ChiHKCEE06": "field.hkceechi06",
+        "EngHKCEEb": "field.hkceeengb",
+        "BLNST_DP": "gf340from_field_blnstD-",
+        "CRE_Chi": "field.creuc",
+        "CRE_Eng": "field.creue",
+        "CRE_AT": "field.creat"
+    },
+    "Section IV (Employment & Gov Service)": {
+        "LoyaltySigned": "gf340from_field_royaltyVow-",
+        "DisciplinaryRecord": "gf340from_field_offence-",
+        "FullEmploymentRecord": {
+            "Selectors": {
+                "Firm": "field.empfirm",
+                "Position": "field.emppos",
+                "Nature": "field.empnature",
+                "From": "field.empfrom",
+                "To": "field.empto",
+                "FullTime": "field.emptype"
+            }
+        }
+    },
+    "Academic Attainment (Section II)": {
+        "PublicExams": {
+            "Selectors": {
+                "Auth": "field.examissueauth",
+                "Date": "field.examissuedate",
+                "Name": "field.examname",
+                "Subject": "field.examsubject",
+                "Grade": "field.examsubjectlvl"
+            }
+        },
+        "Education": {
+            "Selectors": {
+                "Inst": "field.edutype",
+                "Class": "field.educlass",
+                "Major": "field.eduprog",
+                "From": "field.edufrom",
+                "To": "field.eduto"
+            }
+        }
+    },
+    "Section C (Declarations)": {
+        "Consent1": "field.consent",
+        "Consent2": "field.consentA",
+        "Consent3": "field.consentB"
+    }
+}

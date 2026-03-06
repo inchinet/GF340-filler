@@ -1,0 +1,168 @@
+姓氏: CHAN
+名字: TAI MAN
+中文姓名: 陳大文
+中文字碼1: 7099
+中文字碼2: 1129
+中文字碼3: 0321
+出生日: 01
+出生月: 01
+出生年: 1985
+出生地點: Hong Kong
+身份證1: A
+身份證2: 123456
+身份證3: B
+性別: M
+永久居民: Y
+地址1: Flat A, 1/F, Block 1, Sample Court,
+地址2: 1 Sample Street,
+地區: Yuen Long
+國家: Hong Kong
+電話: 91234567
+電郵: sample@example.com
+
+# 居港年期（只需一行）
+居港由0: 01/1985
+居港至0: 03/2026
+
+# 公開考試（8行：0-7）
+考試機構0: HK Examination and Assessment Authority
+考試日期0: 05/2002
+考試名稱0: HKCEE
+科目0: Chinese Language
+成績0: B
+
+考試機構1: HK Examination and Assessment Authority
+考試日期1: 05/2002
+考試名稱1: HKCEE
+科目1: English Language
+成績1: C
+
+考試機構2: HK Examination and Assessment Authority
+考試日期2: 05/2002
+考試名稱2: HKCEE
+科目2: Mathematics
+成績2: B
+
+考試機構3: HK Examination and Assessment Authority
+考試日期3: 05/2002
+考試名稱3: HKCEE
+科目3: Physics
+成績3: C
+
+考試機構4: HK Examination and Assessment Authority
+考試日期4: 05/2004
+考試名稱4: HKALE
+科目4: Use of English
+成績4: E
+
+考試機構5:
+考試日期5:
+考試名稱5:
+科目5:
+成績5:
+
+考試機構6:
+考試日期6:
+考試名稱6:
+科目6:
+成績6:
+
+考試機構7:
+考試日期7:
+考試名稱7:
+科目7:
+成績7:
+
+# 學歷（2行：0-1）
+院校0: City University of Hong Kong
+學歷級別0: Bachelor's Honours Degree
+主修科目0: BSc (Hons) in Computer Science
+修讀方式0: Full time on Campus
+修讀由0: 09/2003
+修讀至0: 06/2007
+
+院校1:
+學歷級別1:
+主修科目1:
+修讀方式1:
+修讀由1:
+修讀至1:
+
+# 完整工作記錄（8行：0-7）
+全職0: Y
+機構0: Sample Company A Ltd.
+職位0: Programmer
+工作性質0: IT programming
+由0: 01/09/2007
+至0: 31/08/2010
+
+全職1: Y
+機構1: Sample Company B Ltd.
+職位1: Analyst Programmer
+工作性質1: IT system analysis & design
+由1: 01/09/2010
+至1: 31/12/2015
+
+全職2: Y
+機構2: Sample Company C Ltd.
+職位2: Senior Analyst
+工作性質2: IT project management
+由2: 01/01/2016
+至2: 31/03/2026
+
+全職3:
+機構3:
+職位3:
+工作性質3:
+由3:
+至3:
+
+全職4:
+機構4:
+職位4:
+工作性質4:
+由4:
+至4:
+
+全職5:
+機構5:
+職位5:
+工作性質5:
+由5:
+至5:
+
+全職6:
+機構6:
+職位6:
+工作性質6:
+由6:
+至6:
+
+全職7:
+機構7:
+職位7:
+工作性質7:
+由7:
+至7:
+
+# 第三部分：補充資料
+學士學位: Y
+中文會考06: B
+英文會考B: C
+基本法測試: Y
+中文運用: 2
+英文運用: 2
+能力傾向: P
+
+# 第四部分（政府職位）
+宣誓效忠: N
+紀律記錄: N
+總工齡年: 18
+總工齡月: 6
+刑事罪行: N
+殘疾: N
+
+# 第C部分（聲明）
+同意1: Y
+同意2: Y
+同意3: Y
