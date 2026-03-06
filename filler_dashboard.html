@@ -228,7 +228,7 @@
             "永久居民": "gf340from_field_permres",
             "地址1": "gf340from_field_radd1",
             "地址2": "gf340from_field_radd2",
-            "地區": "gf340from_field_radd3",
+            "地區": "field.radd3",
             "國家": "myraddr",
             "電話": "gf340from_field_tele1",
             "電郵": "gf340from_dto004_email",
@@ -361,11 +361,11 @@
         
         const translations = {
             "YUEN LONG": "元朗", "TSUEN WAN": "荃灣", "TUEN MUN": "屯門", "TAI PO": "大埔",
-            "SHA TIN": "沙田", "SAI KUNG": "西貢", "NORTH": "北區", "ISLANDS": "離島",
+            "SHA TIN": "沙田", "西貢": "西貢", "NORTH": "北區", "ISLANDS": "離島",
             "KWAI TSING": "葵青", "KWUN TONG": "觀塘", "WONG TAI SIN": "黃大仙",
             "KOWLOON CITY": "九龍城", "SHAM SHUI PO": "深水埗", "YAU TSIM MONG": "油尖旺",
             "CENTRAL AND WESTERN": "中西區", "WAN CHAI": "灣仔", "EASTERN": "東區", "SOUTHERN": "南區",
-            "HONG KONG": "香港", "MAINLAND": "內地", "KOWLOON": "九龍",
+            "HONG KONG": "香港", "MAINLAND": "內地",
             "FULL TIME ON CAMPUS": "FULL TIME ON CAMPUS", "PART TIME ON CAMPUS": "PART TIME ON CAMPUS",
             "DISTANCE LEARNING": "DISTANCE LEARNING"
         };
@@ -381,13 +381,13 @@
         } else if (el.tagName === 'SELECT') {
             let found = false;
             for(let i=0; i<el.options.length; i++) {
-                const optText = el.options[i].text.trim().toUpperCase();
-                if(optText === upperVal || (transVal && optText === transVal.trim())) { el.selectedIndex = i; found = true; break; }
+                const optText = el.options[i].text.toUpperCase();
+                if(optText === upperVal || (transVal && optText === transVal)) { el.selectedIndex = i; found = true; break; }
             }
             if (!found) {
                 for(let i=0; i<el.options.length; i++) {
-                    const optText = el.options[i].text.trim().toUpperCase();
-                    if(optText.includes(upperVal) || (transVal && optText.includes(transVal.trim()))) { el.selectedIndex = i; break; }
+                    const optText = el.options[i].text.toUpperCase();
+                    if(optText.includes(upperVal) || (transVal && optText.includes(transVal))) { el.selectedIndex = i; break; }
                 }
             }
         } else {
@@ -397,13 +397,13 @@
             if (sel) {
                 let found = false;
                 for(let i=0; i<sel.options.length; i++) {
-                    const optText = sel.options[i].text.trim().toUpperCase();
-                    if(optText === upperVal || (transVal && optText === transVal.trim())) { sel.selectedIndex = i; found = true; break; }
+                    const optText = sel.options[i].text.toUpperCase();
+                    if(optText === upperVal || (transVal && optText === transVal)) { sel.selectedIndex = i; found = true; break; }
                 }
                 if (!found) {
                     for(let i=0; i<sel.options.length; i++) {
-                        const optText = sel.options[i].text.trim().toUpperCase();
-                        if(optText.includes(upperVal) || (transVal && optText.includes(transVal.trim()))) { sel.selectedIndex = i; break; }
+                        const optText = sel.options[i].text.toUpperCase();
+                        if(optText.includes(upperVal) || (transVal && optText.includes(transVal))) { sel.selectedIndex = i; break; }
                     }
                 }
                 sel.dispatchEvent(new Event('change', {bubbles:true}));
@@ -462,11 +462,6 @@
                 if (radio) radio.checked = true;
             } else {
                 let el = document.getElementById(id) || document.getElementsByName(id)[0];
-                // Fallback for district field if first ID fails
-                if (!el && key === '地區' && id.includes('radd3')) {
-                    el = document.getElementById('field.radd3') || document.getElementsByName('field.radd3')[0] || 
-                         document.getElementById('gf340from_field_radd3') || document.getElementsByName('gf340from_field_radd3')[0];
-                }
                 if (el) setValue(el, data[key]);
             }
         }
