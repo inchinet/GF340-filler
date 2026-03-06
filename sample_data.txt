@@ -15,7 +15,7 @@
 永久居民: Y
 地址1: Flat A, 1/F, Block 1, Sample Court,
 地址2: 1 Sample Street,
-地區: Yuen Long
+地區: Central
 國家: Hong Kong
 電話: 91234567
 電郵: sample@example.com
@@ -74,7 +74,7 @@
 成績7:
 
 # 學歷（2行：0-1）
-院校0: City University of Hong Kong
+院校0: Poly University of Hong Kong
 學歷級別0: Bachelor's Honours Degree
 主修科目0: BSc (Hons) in Computer Science
 修讀方式0: Full time on Campus
@@ -157,8 +157,8 @@
 # 第四部分（政府職位）
 宣誓效忠: N
 紀律記錄: N
-總工齡年: 18
-總工齡月: 6
+總工齡年: 
+總工齡月: 
 刑事罪行: N
 殘疾: N
 
