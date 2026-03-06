@@ -6,8 +6,8 @@
 > **僅供個人使用。** 本工具由 [inchinet](https://github.com/inchinet) 為個人用途開發。
 > 請勿公開分享已填寫的資料檔案。
 
-![GF340](https://github.com/inchinet/GF340-filler/blob/main/sample.png)
-![GF340-filler](https://github.com/inchinet/GF340-filler/blob/main/sample2.png)
+![GF340](https://github.com/inchinet/GF340-filler/blob/master/sample.png)
+![GF340-filler](https://github.com/inchinet/GF340-filler/blob/master/sample2.png)
 
 
 ---

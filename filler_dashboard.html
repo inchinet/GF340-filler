@@ -381,13 +381,13 @@
         } else if (el.tagName === 'SELECT') {
             let found = false;
             for(let i=0; i<el.options.length; i++) {
-                const optText = el.options[i].text.toUpperCase();
-                if(optText === upperVal || (transVal && optText === transVal)) { el.selectedIndex = i; found = true; break; }
+                const optText = el.options[i].text.trim().toUpperCase();
+                if(optText === upperVal || (transVal && optText === transVal.trim())) { el.selectedIndex = i; found = true; break; }
             }
             if (!found) {
                 for(let i=0; i<el.options.length; i++) {
-                    const optText = el.options[i].text.toUpperCase();
-                    if(optText.includes(upperVal) || (transVal && optText.includes(transVal))) { el.selectedIndex = i; break; }
+                    const optText = el.options[i].text.trim().toUpperCase();
+                    if(optText.includes(upperVal) || (transVal && optText.includes(transVal.trim()))) { el.selectedIndex = i; break; }
                 }
             }
         } else {
@@ -397,13 +397,13 @@
             if (sel) {
                 let found = false;
                 for(let i=0; i<sel.options.length; i++) {
-                    const optText = sel.options[i].text.toUpperCase();
-                    if(optText === upperVal || (transVal && optText === transVal)) { sel.selectedIndex = i; found = true; break; }
+                    const optText = sel.options[i].text.trim().toUpperCase();
+                    if(optText === upperVal || (transVal && optText === transVal.trim())) { sel.selectedIndex = i; found = true; break; }
                 }
                 if (!found) {
                     for(let i=0; i<sel.options.length; i++) {
-                        const optText = sel.options[i].text.toUpperCase();
-                        if(optText.includes(upperVal) || (transVal && optText.includes(transVal))) { sel.selectedIndex = i; break; }
+                        const optText = sel.options[i].text.trim().toUpperCase();
+                        if(optText.includes(upperVal) || (transVal && optText.includes(transVal.trim()))) { sel.selectedIndex = i; break; }
                     }
                 }
                 sel.dispatchEvent(new Event('change', {bubbles:true}));
