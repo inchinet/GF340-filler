@@ -361,16 +361,22 @@
         
         const translations = {
             "YUEN LONG": "元朗", "TSUEN WAN": "荃灣", "TUEN MUN": "屯門", "TAI PO": "大埔",
-            "SHA TIN": "沙田", "西貢": "西貢", "NORTH": "北區", "ISLANDS": "離島",
+            "SHA TIN": "沙田", "SAI KUNG": "西貢", "NORTH": "北區", "ISLANDS": "離島",
             "KWAI TSING": "葵青", "KWUN TONG": "觀塘", "WONG TAI SIN": "黃大仙",
             "KOWLOON CITY": "九龍城", "SHAM SHUI PO": "深水埗", "YAU TSIM MONG": "油尖旺",
-            "CENTRAL AND WESTERN": "中西區", "WAN CHAI": "灣仔", "EASTERN": "東區", "SOUTHERN": "南區",
-            "HONG KONG": "香港", "MAINLAND": "內地",
-            "FULL TIME ON CAMPUS": "FULL TIME ON CAMPUS", "PART TIME ON CAMPUS": "PART TIME ON CAMPUS",
-            "DISTANCE LEARNING": "DISTANCE LEARNING"
+            "CENTRAL AND WESTERN": "中西區", "CENTRAL": "中西區", "WAN CHAI": "灣仔", 
+            "EASTERN": "東區", "SOUTHERN": "南區", "HONG KONG": "香港", "MAINLAND": "內地",
+            "OFFSHORE": "內地", "FULL TIME ON CAMPUS": "全日制", "PART TIME ON CAMPUS": "兼讀制",
+            "DISTANCE LEARNING": "遙距學習", "FULL TIME": "全日制", "PART TIME": "兼讀制",
+            "BACHELOR'S HONOURS DEGREE": "榮譽學士學位", "BACHELOR'S DEGREE": "學士學位",
+            "MASTER'S OR HIGHER DEGREE": "碩士學位或以上學歷", "MASTER'S DEGREE": "碩士學位",
+            "ASSOCIATE DEGREE": "副學士", "HIGHER DIPLOMA": "高級文憑", "DIPLOMA": "文憑",
+            "SECONDARY 6": "中六", "SECONDARY 7": "中七", "PRIMARY 6": "小六",
+            "CERTIFICATE": "證書", "HIGHER CERTIFICATE": "高級證書",
+            "POST-GRADUATE DIPLOMA": "學位文憑", "POST-GRADUATE CERTIFICATE": "學位證書"
         };
 
-        const upperVal = val.toUpperCase();
+        const upperVal = val.toString().toUpperCase();
         const transVal = translations[upperVal];
 
         if (el.type === 'radio') {
@@ -452,9 +458,9 @@
 
     for (let [key, id] of Object.entries(nameMap)) {
         if (data[key]) {
-            const val = data[key].toUpperCase();
+            const val = data[key].toString().toUpperCase();
             if (['性別', '永久居民', '學士學位'].includes(key)) {
-                let radio = document.getElementById(id + val) || document.getElementById(id + (val === 'Y' ? '1' : '2'));
+                let radio = document.getElementById(id + val) || document.getElementById(id + (val === 'Y' || val === 'M' ? '1' : '2'));
                 if (radio) setValue(radio, val);
             } else if (id.endsWith('-')) {
                 let suffix = (val === 'Y' || val === 'YES') ? '1' : '2';
@@ -468,40 +474,104 @@
     }
 
     for (let i = 0; i < maxExams; i++) {
-        let authSel = document.getElementsByName('sexamissueauth')[i];
-        let authInp = document.getElementsByName('field.examissueauth')[i];
-        if (data['考試機構'+i]) {
-            if (authSel) {
-                const txt = data['考試機構'+i].toUpperCase();
-                for (let j = 0; j < authSel.options.length; j++) {
-                    if (authSel.options[j].text.toUpperCase().includes(txt)) { authSel.selectedIndex = j; break; }
+        const examHeader = [
+            { id: 'field.examissueauth', dropdown: 'sexamissueauth', dataKey: '考試機構' + i },
+            { id: 'field.examissuedate', dropdown: null, dataKey: '考試日期' + i },
+            { id: 'field.examname', dropdown: 'sexamname', dataKey: '考試名稱' + i }
+        ];
+
+        // Phase 1: Fill Authority, Date, and Exam Name
+        for (const field of examHeader) {
+            const val = data[field.dataKey];
+            if (!val) continue;
+
+            const input = document.getElementsByName(field.id)[i];
+            const dropdown = field.dropdown ? document.getElementsByName(field.dropdown)[i] : null;
+
+            if (dropdown) {
+                const txt = val.toUpperCase();
+                for (let j = 0; j < dropdown.options.length; j++) {
+                    if (dropdown.options[j].text.toUpperCase().includes(txt)) { 
+                        dropdown.selectedIndex = j; 
+                        break; 
+                    }
                 }
-                authSel.dispatchEvent(new Event('change',{bubbles:true}));
+                dropdown.dispatchEvent(new Event('change',{bubbles:true}));
             }
-            if (authInp) { authInp.value = data['考試機構'+i]; authInp.dispatchEvent(new Event('input',{bubbles:true})); }
+            if (input) { 
+                input.value = val; 
+                input.dispatchEvent(new Event('input',{bubbles:true}));
+                input.dispatchEvent(new Event('change',{bubbles:true}));
+            }
         }
 
-        let dateEl = document.getElementsByName('field.examissuedate')[i];
-        if (dateEl && data['考試日期'+i]) { dateEl.value = data['考試日期'+i]; dateEl.dispatchEvent(new Event('change',{bubbles:true})); }
+        // Wait for portal to load Subject/Grade lists (AJAX)
+        await new Promise(r => setTimeout(r, 600));
 
-        let nameSel = document.getElementsByName('sexamname')[i];
-        let nameInp = document.getElementsByName('field.examname')[i];
-        if (data['考試名稱'+i]) {
-            if (nameSel) {
-                const txt = data['考試名稱'+i].toUpperCase();
-                for (let j = 0; j < nameSel.options.length; j++) {
-                    if (nameSel.options[j].text.toUpperCase().includes(txt)) { nameSel.selectedIndex = j; break; }
+        // Phase 2: Fill Subject and Grade
+        const examDetails = [
+            { id: 'field.examsubject', dropdown: 'sexamname2', dataKey: '科目' + i },
+            { id: 'field.examsubjectlvl', dropdown: 'sexamname3', dataKey: '成績' + i }
+        ];
+
+        for (const field of examDetails) {
+            const val = data[field.dataKey];
+            if (!val) continue;
+
+            const input = document.getElementsByName(field.id)[i];
+            const dropdown = field.dropdown ? document.getElementsByName(field.dropdown)[i] : null;
+
+            if (dropdown) {
+                const txt = val.toUpperCase();
+                let matchIndex = -1;
+                
+                const subjMaps = {
+                    "CHINESE LANGUAGE": ["CHIN LANG", "中國語文", "中", "中國"],
+                    "ENGLISH LANGUAGE": ["ENG LANG", "英國語文", "英", "英國"],
+                    "MATHEMATICS": ["MATH", "數學"],
+                    "PURE MATHEMATICS": ["PURE MATH", "純粹數學"],
+                    "PHYSICS": ["PHYS", "物理"],
+                    "CHEMISTRY": ["CHEM", "化學"],
+                    "BIOLOGY": ["BIOL", "生物"],
+                    "USE OF ENGLISH": ["USE OF ENG", "英語運用"],
+                    "CHIN LANG": ["中國語文"],
+                    "ENG LANG": ["英國語文"]
+                };
+                
+                const gradesMap = {
+                    "LEVEL 5**": ["5**", "第5**級"], "LEVEL 5*": ["5*", "第5*級"],
+                    "LEVEL 5": ["5", "第5級"], "LEVEL 4": ["4", "第4級"],
+                    "LEVEL 3": ["3", "第3級"], "LEVEL 2": ["2", "第2級"], "LEVEL 1": ["1", "第1級"],
+                    "GRADE A": ["A", "甲級"], "GRADE B": ["B", "乙級"], "GRADE C": ["C", "丙級"],
+                    "GRADE D": ["D", "丁級"], "GRADE E": ["E", "戊級"], "GRADE F": ["F", "己級"],
+                    "PASS": ["P", "及格", "合格"], "FAIL": ["F", "不及格", "不合格"]
+                };
+
+                const targets = [txt];
+                if (subjMaps[txt]) targets.push(...subjMaps[txt]);
+                if (gradesMap[txt]) targets.push(...gradesMap[txt]);
+                if (txt.startsWith("GRADE ")) targets.push(txt.replace("GRADE ", ""));
+                if (txt.startsWith("LEVEL ")) targets.push(txt.replace("LEVEL ", ""));
+
+                for (let j = 0; j < dropdown.options.length; j++) {
+                    const optText = dropdown.options[j].text.toUpperCase();
+                    if (targets.some(t => optText === t || optText.includes(t))) { 
+                        matchIndex = j; 
+                        break; 
+                    }
                 }
-                nameSel.dispatchEvent(new Event('change',{bubbles:true}));
+                
+                if (matchIndex >= 0) {
+                    dropdown.selectedIndex = matchIndex;
+                    dropdown.dispatchEvent(new Event('change',{bubbles:true}));
+                }
             }
-            if (nameInp) { nameInp.value = data['考試名稱'+i]; nameInp.dispatchEvent(new Event('input',{bubbles:true})); }
+            if (input) { 
+                input.value = val; 
+                input.dispatchEvent(new Event('input',{bubbles:true}));
+                input.dispatchEvent(new Event('change',{bubbles:true}));
+            }
         }
-
-        let subjEl = document.getElementsByName('field.examsubject')[i];
-        if (subjEl && data['科目'+i]) { subjEl.value = data['科目'+i]; subjEl.dispatchEvent(new Event('change',{bubbles:true})); }
-
-        let gradeEl = document.getElementsByName('field.examsubjectlvl')[i];
-        if (gradeEl && data['成績'+i]) { gradeEl.value = data['成績'+i]; gradeEl.dispatchEvent(new Event('change',{bubbles:true})); }
     }
 
     const skipPrefixes = new Set(['考試機構','考試日期','考試名稱','科目','成績']);
@@ -514,7 +584,7 @@
                     const firmBox = document.getElementsByName('field.empfirm')[i];
                     const row = firmBox ? firmBox.closest('tr') : null;
                     if (row) {
-                        const isFT = ['Y','YES','1','F'].includes(data[key].toUpperCase());
+                        const isFT = ['Y','YES','1','F'].includes(data[key].toString().toUpperCase());
                         const cbs = Array.from(row.querySelectorAll('input[type="checkbox"]'));
                         let target = isFT ? cbs.find(c => c.value === 'F' || c.value === '1') : cbs.find(c => c.value === 'P' || c.value === '0');
                         if (!target) target = isFT ? cbs[0] : cbs[1];
@@ -534,7 +604,7 @@
         }
     }
 
-    alert("AntiGravity: Transfer complete!");
+    alert("AntiGravity: Transfer complete (Bi-lingual Mode)!");
 })();`;
 
             await navigator.clipboard.writeText(script);
