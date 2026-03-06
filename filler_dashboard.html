@@ -575,9 +575,10 @@
     }
 
     const skipPrefixes = new Set(['考試機構','考試日期','考試名稱','科目','成績']);
+    const listMax = Math.max(maxExams, maxEdu, maxWork, 15); // Process at least 15 or more if needed
     for (let [prefix, nameAttr] of Object.entries(listMap)) {
         if (skipPrefixes.has(prefix)) continue;
-        for (let i = 0; i < 15; i++) {
+        for (let i = 0; i < listMax; i++) {
             let key = prefix + i;
             if (data[key]) {
                 if (prefix === '全職') {
