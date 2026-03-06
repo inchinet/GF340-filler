@@ -28,7 +28,7 @@
             "gf340from_field_radd1",
             "gf340from_field_radd2"
         ],
-        "District": "field.radd3",
+        "District": "gf340from_field_radd3",
         "Country": "myraddr",
         "Phone": "gf340from_field_tele1",
         "Email": "gf340from_dto004_email",
