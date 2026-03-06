@@ -1,10 +1,14 @@
 # 🚀 Antigravity | GF340 自動填表工具
 
-一個以瀏覽器執行的工具，可自動填寫香港政府 **G.F. 340** 網上申請表格，「智方便」並未能填所有履歷資料。
+一個以瀏覽器執行的工具，可幫手自動填寫香港政府 **G.F. 340** 網上申請表格，「智方便」並未能填所有履歷資料。
 所有資料均於**本機處理**，不會上傳至任何伺服器。
 
 > **僅供個人使用。** 本工具由 [inchinet](https://github.com/inchinet) 為個人用途開發。
 > 請勿公開分享已填寫的資料檔案。
+
+![GF340](https://github.com/inchinet/GF340-filler/blob/main/sample.png)
+![GF340-filler](https://github.com/inchinet/GF340-filler/blob/main/sample2.png)
+
 
 ---
 
