@@ -207,80 +207,80 @@
 
     <script>
         const nameMapping = {
-            // 甲部：個人資料
-            "姓氏": "gf340from_field_name",
-            "名字": "gf340from_field_name2",
-            "中文姓名": "gf340from_field_chiname",
-            "中文字碼1": "label0",
-            "中文字碼2": "label1",
-            "中文字碼3": "label2",
-            "中文字碼4": "label3",
-            "中文字碼5": "label4",
-            "中文字碼6": "label5",
-            "出生日": "dob0",
-            "出生月": "dob1",
-            "出生年": "dob2",
-            "出生地點": "dobplace",
-            "身份證1": "hkid0",
-            "身份證2": "hkid1",
-            "身份證3": "hkid2",
-            "性別": "gf340from_field_sex",
-            "永久居民": "gf340from_field_permres",
-            "地址1": "gf340from_field_radd1",
-            "地址2": "gf340from_field_radd2",
-            "地區": "field.radd3",
-            "國家": "myraddr",
-            "電話": "gf340from_field_tele1",
-            "電郵": "gf340from_dto004_email",
+            // 甲部：個人資料 (Personal Particulars)
+            "姓氏": "gf340from_field_name", "Surname": "gf340from_field_name",
+            "名字": "gf340from_field_name2", "GivenName": "gf340from_field_name2",
+            "中文姓名": "gf340from_field_chiname", "ChineseName": "gf340from_field_chiname",
+            "中文字碼1": "label0", "ChineseCode1": "label0",
+            "中文字碼2": "label1", "ChineseCode2": "label1",
+            "中文字碼3": "label2", "ChineseCode3": "label2",
+            "中文字碼4": "label4", "ChineseCode4": "label4",
+            "中文字碼5": "label5", "ChineseCode5": "label5",
+            "中文字碼6": "label6", "ChineseCode6": "label6",
+            "出生日": "dob0", "DOB_Day": "dob0",
+            "出生月": "dob1", "DOB_Month": "dob1",
+            "出生年": "dob2", "DOB_Year": "dob2",
+            "出生地點": "dobplace", "PlaceOfBirth": "dobplace",
+            "身份證1": "hkid0", "HKID1": "hkid0",
+            "身份證2": "hkid1", "HKID2": "hkid1",
+            "身份證3": "hkid2", "HKID3": "hkid2",
+            "性別": "gf340from_field_sex", "Sex": "gf340from_field_sex",
+            "永久居民": "gf340from_field_permres", "PermRes": "gf340from_field_permres",
+            "地址1": "gf340from_field_radd1", "Address1": "gf340from_field_radd1",
+            "地址2": "gf340from_field_radd2", "Address2": "gf340from_field_radd2",
+            "地區": "field.radd3", "District": "field.radd3",
+            "國家": "myraddr", "Country": "myraddr",
+            "電話": "gf340from_field_tele1", "Phone": "gf340from_field_tele1",
+            "電郵": "gf340from_dto004_email", "Email": "gf340from_dto004_email",
 
-            // 甲部（底）/ 乙部 / 罪行
-            "刑事罪行": "gf340from_field_guilty-",
-            "殘疾": "gf340from_field_disabled-",
+            // 甲部（底）/ 乙部 / 罪行 (Offence / Disabled)
+            "刑事罪行": "gf340from_field_guilty-", "GuiltyOffence": "gf340from_field_guilty-",
+            "殘疾": "gf340from_field_disabled-", "Disabled": "gf340from_field_disabled-",
 
-            // 第四部分（政府職位）
-            "宣誓效忠": "gf340from_field_royaltyVow-",
-            "紀律記錄": "gf340from_field_offence-",
+            // 第四部分（政府職位） (Gov Service)
+            "宣誓效忠": "gf340from_field_royaltyVow-", "SignedLoyalty": "gf340from_field_royaltyVow-",
+            "紀律記錄": "gf340from_field_offence-", "DisciplinaryRecord": "gf340from_field_offence-",
 
-            // 總全職工作年期
-            "總工齡年": "field.emptyear",
-            "總工齡月": "field.empmonth",
+            // 總全職工作年期 (Total Emp)
+            "總工齡年": "field.emptyear", "TotalEmpYears": "field.emptyear",
+            "總工齡月": "field.empmonth", "TotalEmpMonths": "field.empmonth",
 
-            // 第C部分（聲明）
-            "同意1": "field.consent",
-            "同意2": "field.consentA",
-            "同意3": "field.consentB",
+            // 第C部分（聲明） (Declarations)
+            "同意1": "field.consent", "Consent1": "field.consent",
+            "同意2": "field.consentA", "Consent2": "field.consentA",
+            "同意3": "field.consentB", "Consent3": "field.consentB",
 
-            // 第三部分：補充資料
-            "學士學位": "gf340from_field_degtee",
-            "中文會考06": "2006Result",
-            "英文會考B": "SyllabusBResult",
-            "基本法測試": "gf340from_field_blnstD-",
-            "中文運用": "gf340from_field_creuc",
-            "英文運用": "gf340from_field_creue",
-            "能力傾向": "gf340from_field_creat"
+            // 第三部分：補充資料 (Additional Info)
+            "學士學位": "gf340from_field_degtee", "Bachelor": "gf340from_field_degtee",
+            "中文會考06": "2006Result", "ChiHKCEE06": "2006Result",
+            "英文會考B": "SyllabusBResult", "EngHKCEEb": "SyllabusBResult",
+            "基本法測試": "gf340from_field_blnstD-", "BLNST_DP": "gf340from_field_blnstD-",
+            "中文運用": "gf340from_field_creuc", "CRE_Chi": "gf340from_field_creuc",
+            "英文運用": "gf340from_field_creue", "CRE_Eng": "gf340from_field_creue",
+            "能力傾向": "gf340from_field_creat", "CRE_AT": "gf340from_field_creat"
         };
 
         const listMapping = {
-            "居港由": "field.resfrom",
-            "居港至": "field.resto",
-            "居港年期": "field.resduration",
-            "考試機構": "field.examissueauth",
-            "考試日期": "field.examissuedate",
-            "考試名稱": "field.examname",
-            "科目": "field.examsubject",
-            "成績": "field.examsubjectlvl",
-            "院校": "field.edutype",
-            "學歷級別": "field.educlass",
-            "主修科目": "field.eduprog",
-            "修讀方式": "field.edumode",
-            "修讀由": "field.edufrom",
-            "修讀至": "field.eduto",
-            "機構": "field.empfirm",
-            "職位": "field.emppos",
-            "工作性質": "field.empnature",
-            "由": "field.empfrom",
-            "至": "field.empto",
-            "全職": "field.emptype"
+            "居港由": "field.resfrom", "ResFrom": "field.resfrom",
+            "居港至": "field.resto", "ResTo": "field.resto",
+            "居港年期": "field.resduration", "ResDuration": "field.resduration",
+            "考試機構": "field.examissueauth", "ExamAuth": "field.examissueauth",
+            "考試日期": "field.examissuedate", "ExamDate": "field.examissuedate",
+            "考試名稱": "field.examname", "ExamName": "field.examname",
+            "科目": "field.examsubject", "Subject": "field.examsubject",
+            "成績": "field.examsubjectlvl", "Grade": "field.examsubjectlvl",
+            "院校": "field.edutype", "EduInst": "field.edutype",
+            "學歷級別": "field.educlass", "EduClass": "field.educlass",
+            "主修科目": "field.eduprog", "EduMajor": "field.eduprog",
+            "修讀方式": "field.edumode", "EduMode": "field.edumode",
+            "修讀由": "field.edufrom", "EduFrom": "field.edufrom",
+            "修讀至": "field.eduto", "EduTo": "field.eduto",
+            "機構": "field.empfirm", "Org": "field.empfirm",
+            "職位": "field.emppos", "Pos": "field.emppos",
+            "工作性質": "field.empnature", "Nature": "field.empnature",
+            "由": "field.empfrom", "From": "field.empfrom",
+            "至": "field.empto", "To": "field.empto",
+            "全職": "field.emptype", "FullTime": "field.emptype"
         };
 
         function parseData(text) {
@@ -299,17 +299,20 @@
         }
 
         function detectCounts(data) {
-            const countOf = (prefix) => {
+            const countOf = (prefixes) => {
                 const indices = Object.keys(data)
-                    .filter(k => k.startsWith(prefix) && /\d+$/.test(k) && data[k] !== '')
-                    .map(k => parseInt(k.replace(prefix, ''), 10))
+                    .filter(k => prefixes.some(p => k.startsWith(p)) && /\d+$/.test(k) && data[k] !== '')
+                    .map(k => {
+                        const prefix = prefixes.find(p => k.startsWith(p));
+                        return parseInt(k.replace(prefix, ''), 10);
+                    })
                     .filter(n => !isNaN(n));
                 return indices.length === 0 ? 0 : Math.max(...indices) + 1;
             };
             return {
-                exams: countOf('考試機構'),
-                edu: countOf('院校'),
-                work: countOf('機構')
+                exams: countOf(['考試機構', 'ExamAuth']),
+                edu: countOf(['院校', 'EduInst']),
+                work: countOf(['機構', 'Org'])
             };
         }
 
@@ -434,17 +437,20 @@
         }
     }
 
-    function detectMax(prefix) {
+    function detectMax(prefixes) {
         const indices = Object.keys(data)
-            .filter(k => k.startsWith(prefix) && /\\d+$/.test(k) && data[k] !== '')
-            .map(k => parseInt(k.replace(prefix, ''), 10))
+            .filter(k => prefixes.some(p => k.startsWith(p)) && /\\d+$/.test(k) && data[k] !== '')
+            .map(k => {
+                const prefix = prefixes.find(p => k.startsWith(p));
+                return parseInt(k.replace(prefix, ''), 10);
+            })
             .filter(n => !isNaN(n));
         return indices.length === 0 ? 0 : Math.max(...indices) + 1;
     }
     
-    const maxExams = detectMax('考試機構');
-    const maxEdu   = detectMax('院校');
-    const maxWork  = detectMax('機構');
+    const maxExams = detectMax(['考試機構', 'ExamAuth']);
+    const maxEdu   = detectMax(['院校', 'EduInst']);
+    const maxWork  = detectMax(['機構', 'Org']);
 
     if (document.querySelector('button[name="examaddentry"]')) {
         await ensureRows('field.examissueauth', 'button[name="examaddentry"]', maxExams);
@@ -459,8 +465,8 @@
     for (let [key, id] of Object.entries(nameMap)) {
         if (data[key]) {
             const val = data[key].toString().toUpperCase();
-            if (['性別', '永久居民', '學士學位'].includes(key)) {
-                let radio = document.getElementById(id + val) || document.getElementById(id + (val === 'Y' || val === 'M' ? '1' : '2'));
+            if (['性別', 'Sex', '永久居民', 'PermRes', '學士學位', 'Bachelor'].includes(key)) {
+                let radio = document.getElementById(id + val) || document.getElementById(id + (val === 'Y' || val === 'M' ? '1' : '2')) || document.getElementById(id + (val === 'M' || val === 'Y' ? '1' : '2'));
                 if (radio) setValue(radio, val);
             } else if (id.endsWith('-')) {
                 let suffix = (val === 'Y' || val === 'YES') ? '1' : '2';
@@ -475,14 +481,14 @@
 
     for (let i = 0; i < maxExams; i++) {
         const examHeader = [
-            { id: 'field.examissueauth', dropdown: 'sexamissueauth', dataKey: '考試機構' + i },
-            { id: 'field.examissuedate', dropdown: null, dataKey: '考試日期' + i },
-            { id: 'field.examname', dropdown: 'sexamname', dataKey: '考試名稱' + i }
+            { id: 'field.examissueauth', dropdown: 'sexamissueauth', dataKey: ['考試機構' + i, 'ExamAuth' + i] },
+            { id: 'field.examissuedate', dropdown: null, dataKey: ['考試日期' + i, 'ExamDate' + i] },
+            { id: 'field.examname', dropdown: 'sexamname', dataKey: ['考試名稱' + i, 'ExamName' + i] }
         ];
 
         // Phase 1: Fill Authority, Date, and Exam Name
         for (const field of examHeader) {
-            const val = data[field.dataKey];
+            const val = field.dataKey.reduce((res, k) => res || data[k], null);
             if (!val) continue;
 
             const input = document.getElementsByName(field.id)[i];
@@ -510,12 +516,12 @@
 
         // Phase 2: Fill Subject and Grade
         const examDetails = [
-            { id: 'field.examsubject', dropdown: 'sexamname2', dataKey: '科目' + i },
-            { id: 'field.examsubjectlvl', dropdown: 'sexamname3', dataKey: '成績' + i }
+            { id: 'field.examsubject', dropdown: 'sexamname2', dataKey: ['科目' + i, 'Subject' + i] },
+            { id: 'field.examsubjectlvl', dropdown: 'sexamname3', dataKey: ['成績' + i, 'Grade' + i] }
         ];
 
         for (const field of examDetails) {
-            const val = data[field.dataKey];
+            const val = field.dataKey.reduce((res, k) => res || data[k], null);
             if (!val) continue;
 
             const input = document.getElementsByName(field.id)[i];
@@ -574,14 +580,14 @@
         }
     }
 
-    const skipPrefixes = new Set(['考試機構','考試日期','考試名稱','科目','成績']);
+    const skipPrefixes = new Set(['考試機構','考試日期','考試名稱','科目','成績', 'ExamAuth', 'ExamDate', 'ExamName', 'Subject', 'Grade']);
     const listMax = Math.max(maxExams, maxEdu, maxWork, 15); // Process at least 15 or more if needed
     for (let [prefix, nameAttr] of Object.entries(listMap)) {
         if (skipPrefixes.has(prefix)) continue;
         for (let i = 0; i < listMax; i++) {
             let key = prefix + i;
             if (data[key]) {
-                if (prefix === '全職') {
+                if (prefix === '全職' || prefix === 'FullTime') {
                     const firmBox = document.getElementsByName('field.empfirm')[i];
                     const row = firmBox ? firmBox.closest('tr') : null;
                     if (row) {
@@ -595,10 +601,10 @@
                 }
                 let el = document.getElementsByName(nameAttr)[i] || document.getElementById(prefix + i);
                 if (!el) {
-                    if (prefix === '由') el = document.getElementsByName('field.empfrom')[i];
-                    else if (prefix === '至') el = document.getElementsByName('field.empto')[i];
-                    else if (prefix === '修讀由') el = document.getElementsByName('field.edufrom')[i];
-                    else if (prefix === '修讀至') el = document.getElementsByName('field.eduto')[i];
+                    if (prefix === '由' || prefix === 'From') el = document.getElementsByName('field.empfrom')[i];
+                    else if (prefix === '至' || prefix === 'To') el = document.getElementsByName('field.empto')[i];
+                    else if (prefix === '修讀由' || prefix === 'EduFrom') el = document.getElementsByName('field.edufrom')[i];
+                    else if (prefix === '修讀至' || prefix === 'EduTo') el = document.getElementsByName('field.eduto')[i];
                 }
                 if (el) setValue(el, data[key], i);
             }
