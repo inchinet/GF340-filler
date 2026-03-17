@@ -18,7 +18,8 @@
 | 檔案 | 用途 |
 |---|---|
 | `filler_dashboard.html` | 主介面 — 貼入資料、產生腳本 |
-| `sample_data.txt` | 包含所有支援欄位的資料範本（已匿名化） |
+| `sample_data.txt` | 資料範本（使用**中文**欄位名稱） |
+| `sample_data_en.txt` | 資料範本（使用**英文**欄位名稱 / English tags） |
 | `field_mapping.json` | 將欄位名稱對應至 GF340 表格的 HTML 元素 ID |
 
 ---
@@ -43,8 +44,11 @@
 ---
 
 ## 📋 資料欄位參考
+ 
+你可以選擇使用**繁體中文**或**英文**欄位名稱（English tags）。
+- **中文版**：編輯 `sample_data.txt`
+- **英文版**：編輯 `sample_data_en.txt`
 
-請按照以下**繁體中文欄位名稱**編輯 `sample_data.txt`。
 欄位名稱**區分大小寫**，以 `: ` 分隔欄位名稱與數值。
 以 `#` 開頭的行為注釋，系統會自動略過。
 
@@ -196,7 +200,7 @@
    [JOA_005.action](https://csboa1.csb.gov.hk/csboa/joa/JOA_005.action)
    （即所有文字輸入欄位所在的頁面）。**支援中文或英文版面。**
 
-3. **準備資料** — 複製 `sample_data.txt`，用記事本填入你的個人資料。
+3. **準備資料** — 根據你的喜好複製 `sample_data.txt` (中文) 或 `sample_data_en.txt` (英文)，用記事本填入你的個人資料。
 
 4. **開啟填表工具** — 在瀏覽器中開啟 `filler_dashboard.html`。
    - 將你的資料內容貼入**左側文字區域**。

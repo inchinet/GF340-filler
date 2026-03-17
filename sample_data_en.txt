@@ -1,0 +1,168 @@
+Surname: CHAN
+GivenName: TAI MAN
+ChineseName: 陳大文
+ChineseCode1: 7099
+ChineseCode2: 1129
+ChineseCode3: 0321
+DOB_Day: 01
+DOB_Month: 01
+DOB_Year: 1985
+PlaceOfBirth: Hong Kong
+HKID1: A
+HKID2: 123456
+HKID3: B
+Sex: M
+PermRes: Y
+Address1: Flat A, 1/F, Block 1, Sample Court,
+Address2: 1 Sample Street,
+District: Central
+Country: Hong Kong
+Phone: 91234567
+Email: sample@example.com
+
+# Length of Residence (Just 1 row)
+ResFrom0: 01/1985
+ResTo0: 03/2026
+
+# PUBLIC EXAMS (8 ROWS: 0-7)
+ExamAuth0: HK Examination and Assessment Authority
+ExamDate0: 05/2002
+ExamName0: HKCEE
+Subject0: Chinese Language
+Grade0: B
+
+ExamAuth1: HK Examination and Assessment Authority
+ExamDate1: 05/2002
+ExamName1: HKCEE
+Subject1: English Language
+Grade1: C
+
+ExamAuth2: HK Examination and Assessment Authority
+ExamDate2: 05/2002
+ExamName2: HKCEE
+Subject2: Mathematics
+Grade2: B
+
+ExamAuth3: HK Examination and Assessment Authority
+ExamDate3: 05/2002
+ExamName3: HKCEE
+Subject3: Physics
+Grade3: C
+
+ExamAuth4: HK Examination and Assessment Authority
+ExamDate4: 05/2004
+ExamName4: HKALE
+Subject4: Use of English
+Grade4: E
+
+ExamAuth5: 
+ExamDate5: 
+ExamName5: 
+Subject5: 
+Grade5: 
+
+ExamAuth6: 
+ExamDate6: 
+ExamName6: 
+Subject6: 
+Grade6: 
+
+ExamAuth7: 
+ExamDate7: 
+ExamName7: 
+Subject7: 
+Grade7: 
+
+# EDUCATION (2 ROWS: 0-1)
+EduInst0: Poly University of Hong Kong
+EduClass0: Bachelor's Honours Degree
+EduMajor0: BSc (Hons) in Computer Science
+EduMode0: Full time on Campus
+EduFrom0: 09/2003
+EduTo0: 06/2007
+
+EduInst1: 
+EduClass1: 
+EduMajor1: 
+EduMode1: 
+EduFrom1: 
+EduTo1: 
+
+# FULL EMPLOYMENT RECORD (8 ROWS: 0-7)
+FullTime0: Y
+Org0: Sample Company A Ltd.
+Pos0: Programmer
+Nature0: IT programming
+From0: 01/09/2007
+To0: 31/08/2010
+
+FullTime1: Y
+Org1: Sample Company B Ltd.
+Pos1: Analyst Programmer
+Nature1: IT system analysis & design
+From1: 01/09/2010
+To1: 31/12/2015
+
+FullTime2: Y
+Org2: Sample Company C Ltd.
+Pos2: Senior Analyst
+Nature2: IT project management
+From2: 01/01/2016
+To2: 31/03/2026
+
+FullTime3: 
+Org3: 
+Pos3: 
+Nature3: 
+From3: 
+To3: 
+
+FullTime4: 
+Org4: 
+Pos4: 
+Nature4: 
+From4: 
+To4: 
+
+FullTime5: 
+Org5: 
+Pos5: 
+Nature5: 
+From5: 
+To5: 
+
+FullTime6: 
+Org6: 
+Pos6: 
+Nature6: 
+From6: 
+To6: 
+
+FullTime7: 
+Org7: 
+Pos7: 
+Nature7: 
+From7: 
+To7: 
+
+# Section III: Additional Information
+Bachelor: Y
+ChiHKCEE06: B
+EngHKCEEb: C
+BLNST_DP: Y
+CRE_Chi: 2
+CRE_Eng: 2
+CRE_AT: P
+
+# Section IV (Gov Service)
+SignedLoyalty: N
+DisciplinaryRecord: N
+TotalEmpYears: 
+TotalEmpMonths: 
+GuiltyOffence: N
+Disabled: N
+
+# Section C (Declarations)
+Consent1: Y
+Consent2: Y
+Consent3: Y
